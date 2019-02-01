@@ -1,0 +1,236 @@
+<configs>
+
+<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/@count">2</set>
+<set xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodEgg']/@count">4</set>
+
+
+<set xpath="/recipes/recipe[@name='foodBoiledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+<set xpath="/recipes/recipe[@name='foodCharredMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+<set xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']/@count">1</set>
+<set xpath="/recipes/recipe[@name='foodGrilledMeat']/ingredient[@name='foodRawMeat']/@count">1</set>
+<set xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']/@count">5</set>
+<set xpath="/recipes/recipe[@name='foodSteakAndPotato']/ingredient[@name='foodRawMeat']/@count">5</set>
+
+<!-- Forged Iron -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='3']/@count">2</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='4']/@count">3</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='5']/@count">4</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='8']/@count">6</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='12']/@count">10</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='15']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='16']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='20']/@count">16</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='24']/@count">20</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='30']/@count">24</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceForgedIron' and @count='40']/@count">34</set>
+	<!-- Duct tape -->
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='4']/@count">3</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='5']/@count">4</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='10']/@count">8</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='12']/@count">10</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='16']/@count">12</set>
+		<set xpath="/recipes/recipe/ingredient[@name='resourceDuctTape' and @count='25']/@count">20</set>
+	
+<insertBefore xpath="/recipes/recipe[@name='ammoArrowStone']">
+	<recipe name="ammoArrowPolymer" count="10">
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceArrowHeadIron" count="10"/>
+		<ingredient name="resourceGlue" count="1"/>
+	</recipe>
+</insertBefore>
+		
+-<append xpath="/recipes">
+
+<!-- add polymers to recipes -->
+-<recipe tags="learnable" craft_area="chemistryStation" count="10" name="resourceScrapPolymers">
+<ingredient count="1" name="drinkJarGrainAlcohol"/>
+<ingredient count="1" name="ammoGasCan"/>
+</recipe>
+
+<!-- add acid to recipes -->
+-<recipe tags="learnable" craft_area="chemistryStation" count="1" name="resourceAcid">
+<ingredient count="1" name="drinkJarRiverWater"/>
+<ingredient count="20" name="resourcePotassiumNitratePowder"/>
+<ingredient count="1" name="drinkJarGrainAlcohol"/>
+<ingredient count="10" name="resourceScrapPolymers"/>
+</recipe>
+
+<recipe name="resourceMilitaryFiber" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true">
+	<wildcard_forge_category />
+</recipe>
+
+</append>
+		
+		<!-- Light System -->
+	
+	<append xpath="/recipes">
+
+		<recipe name="handLanternGlass" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_glass" count="5"/>
+		</recipe>
+		
+		<recipe name="handLanternCasing" count="1" craft_area="forge" material_based="true">
+			<ingredient name="unit_iron" count="15"/>
+		</recipe>		
+		
+		<recipe name="handLantern" count="1">
+			<ingredient name="handLanternCasing" count="1"/>
+			<ingredient name="handLanternGlass" count="1"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>		
+
+	</append>
+
+		<append xpath="/recipes">
+		<recipe name="PlaceableFastBurnTorch" count="1">
+			<ingredient name="handTorch" count="1"/>
+		<ingredient name="drinkCanEmpty" count="1"/>
+		</recipe>
+
+		<recipe name="PlaceableSlowBurnTorch" count="1">
+			<ingredient name="handTorch" count="1"/>
+			<ingredient name="drinkCanEmpty" count="1"/>
+			<ingredient name="resourceOil" count="1"/>	
+		</recipe>
+
+		<recipe name="handTorch" count="1">
+			<ingredient name="resourceCloth" count="1"/>
+			<ingredient name="resourceWood" count="1"/>
+		</recipe>
+	</append>
+	
+<remove xpath="/recipes/recipe[@name='meleeToolTorch']" />
+
+<set xpath="/recipes/recipe[@name='modMeleeClubBurningShaft']/ingredient[@name='meleeToolTorch']/@name">handTorch</set>
+
+	<append xpath="/recipes">
+		<recipe name="vehicleQuadPlaceable" count="1" craft_area="workbench" craft_time="600" tags="learnable">
+			<ingredient name="vehicleWheels" count="4"/>
+			<ingredient name="vehicleMotorcycleChassis" count="1"/>
+			<ingredient name="vehicleMotorcycleHandlebars" count="1"/>
+			<ingredient name="smallEngine" count="2"/>
+			<ingredient name="carBattery" count="1"/>
+		</recipe>
+	</append>
+	
+		<append xpath="/recipes">
+		<recipe name="vehicleMilitaryTruckPlaceable" count="1" craft_area="workbench" craft_time="600" tags="learnable">
+			<ingredient name="vehicleMilitaryTruckChasis" count="1"/>
+			<ingredient name="vehicleWheels" count="10"/>
+			<ingredient name="resourceWood" count="200"/>
+			<ingredient name="resourceElectricParts" count="100"/>
+			<ingredient name="resourceCloth" count="100"/>
+		</recipe>
+		
+		<recipe name="vehicleMilitaryTruckChasis" count="1" craft_area="workbench" craft_time="600" tags="learnable">
+			<ingredient name="smallEngine" count="4"/>
+			<ingredient name="carBattery" count="2"/>
+			<ingredient name="resourceHeadlight" count="8"/>
+			<ingredient name="resourceMechanicalParts" count="150"/>
+			<ingredient name="resourceForgedSteel" count="400"/>
+		</recipe>
+		
+	</append>
+	
+	<!-- Rabbit Trap's Bait Recpes -->
+	
+		<append xpath="/recipes">
+	<recipe name="Herbivore_Bait" count="1" craft_area="campfire" craft_tool="toolBeaker" craft_time="15" tags="learnable">
+		<ingredient name="foodCropCorn" count="4"/>
+		<ingredient name="foodCornMeal" count="2"/>
+		<ingredient name="drinkJarRiverWater" count="2"/>
+	</recipe>
+	<recipe name="Herbivore_Bait" count="1" craft_area="chemistryStation" craft_time="15" tags="learnable">
+		<ingredient name="foodCropCorn" count="2"/>
+		<ingredient name="foodCornMeal" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	</recipe>
+	<recipe name="Unbaited_Primitive_Rabbit_Trap" count="1" craft_time="150" tags="learnable">
+		<ingredient name="resourceWood" count="200"/>
+		<ingredient name="resourceYuccaFibers" count="20"/>
+	</recipe>
+	<recipe name="Baited_Primitive_Rabbit_Trap" count="1" craft_time="1" tags="learnable">
+		<ingredient name="Unbaited_Primitive_Rabbit_Trap" count="1"/>
+		<ingredient name="Herbivore_Bait" count="1"/>
+	</recipe>
+	<recipe name="Unbaited_Reusable_Rabbit_Trap" count="1" craft_area="workbench" craft_time="150" tags="learnable">
+		<ingredient name="resourceWood" count="200"/>
+		<ingredient name="resourceNail" count="20"/>
+		<ingredient name="resourceDuctTape" count="4"/>
+		<ingredient name="barbedWireSheet" count="2"/>
+		<ingredient name="resourceSpring" count="2"/>
+	</recipe>
+	<recipe name="Baited_Reusable_Rabbit_Trap" count="1" craft_time="1" tags="learnable">
+		<ingredient name="Unbaited_Reusable_Rabbit_Trap" count="1"/>
+		<ingredient name="Herbivore_Bait" count="1"/>
+	</recipe>
+	</append>
+	
+	<remove xpath="/recipes/recipe[@name='bedroll']" />
+	<remove xpath="/recipes/recipe[@name='bucketEmpty']" />
+	
+	<append xpath="/recipes">
+		<recipe name="bucketEmpty" count="1" craft_time="200" craft_area="forge">
+			<ingredient name="resourceScrapIron" count="25"/>
+		</recipe>	
+		
+		<recipe name="waterBarrel0" count="1" craft_area="tablesaw">
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceScrapIron" count="12"/>
+			<ingredient name="resourceNail" count="5"/>
+		</recipe>
+	
+		<recipe name="waterBarrel100" count="1" craft_area="tablesaw">
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceScrapIron" count="12"/>
+			<ingredient name="resourceNail" count="5"/>
+			<ingredient name="bucketRiverWater" count="10"/>
+		</recipe>
+
+		<recipe name="bedroll" count="1">
+			<ingredient name="resourceYuccaFibers" count="30"/>
+			<ingredient name="resourceCloth" count="30"/>
+		</recipe>
+		
+		<recipe name="resourceRope" count="1" craft_time="20" >
+			<ingredient name="resourceYuccaFibers" count="20"/>
+		</recipe>
+		
+		<recipe name="well" count="1" craft_time="600" tags="learnable">
+			<ingredient name="resourceRockSmall" count="600" />
+			<ingredient name="resourceWood" count="200" />
+			<ingredient name="resourceRope" count="1" />
+			<ingredient name="bucketEmpty" count="1" />
+		</recipe>
+		
+		<recipe name="windmill" count="1" craft_time="1200" craft_area="workbench" tags="learnable">
+			<ingredient name="resourceRockSmall" count="40"/>
+			<ingredient name="resourceCloth" count="50" />
+			<ingredient name="resourceWood" count="500" />
+			<ingredient name="resourceForgedIron" count="50"/>
+		</recipe>
+	
+		<recipe name="modStoneSpear" count="1" >
+			<ingredient name="resourceRockSmall" count="10"/>
+			<ingredient name="resourceRope" count="1"/>
+		</recipe>
+
+		<recipe name="modIronSpear" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+			<ingredient name="unit_iron" count="100"/>
+			<ingredient name="unit_clay" count="25"/>
+		</recipe>
+
+		<recipe name="modSteelSpear" count="1" craft_area="forge" craft_tool="toolAnvil" material_based="true">
+			<ingredient name="unit_iron" count="1000"/>
+			<ingredient name="unit_clay" count="250"/>
+		</recipe>
+
+		<recipe name="meleeWoodStick" count="1" >
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceRope" count="1"/>
+		</recipe>
+		
+		</append>
+
+</configs>

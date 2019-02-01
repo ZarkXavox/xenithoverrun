@@ -1,0 +1,52 @@
+<configs>
+
+<append xpath="/lootcontainers">
+	<lootgroup name="SurvivalPack" count="all">
+		<item name="drugPainkillers"/>
+		<item name="medicalFirstAidBandage" count="2"/>
+		<item group="beverages" count="1"/>
+		<item group="cannedfood" count="1"/>
+		<item group="weaponsBasicGuns+ammo" count="1"/>
+		<item group="tools" />
+		<item name="tankTop" count="1"/>
+		<item name="denimShortsPants" count="1"/>
+		<item name="wornBoots" count="1"/>
+	</lootgroup>
+</append>
+
+<append xpath="lootcontainers/lootgroup[@name='ammo']">
+		<item name="ammoArrowPolymer" count="5,20"/>
+</append>
+
+<append xpath="/lootcontainers">
+	<lootcontainer id="180" count="1" size="8,4" destroy_on_close="true" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="10" loot_quality_template="baseTemplate">
+    <item group="SurvivalPack" />
+	</lootcontainer>
+</append>
+
+<append xpath="lootcontainers/lootcontainer[@id='94']">
+	<item name="drugAntibiotics" count="1,3" prob="0.2"/>
+	<item name="toolBeaker" count="1" prob="0.5"/>
+</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='weaponsMelee']">
+		<item name="meleeWoodStick" mods="head,sweetspot,grip,pommel" mod_chance=".50"/> 
+	</append>
+  <append xpath="/lootcontainers/lootgroup[@name='modMeleeT1']">
+    <item name="modStoneSpear"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">
+    <item name="modIronSpear"/>
+  </append>
+  <append xpath="/lootcontainers/lootgroup[@name='modMeleeT3']">
+    <item name="modSteelSpear"/>
+  </append>
+
+</configs>
+
+<!--<append xpath="/lootcontainers">
+	<lootgroup name="questChallenge" count="1">
+		<item name="qc_silenceofthelambs" count="1"/>
+	</lootgroup>
+</append>
+-->

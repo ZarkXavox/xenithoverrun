@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+	<configs>
+
+<!-- add acid and polymers to science 1 -->
+		<append xpath="/progression/perks/perk[@name='perkYeahScience']/effect_group/passive_effect[@level='1,5' and contains(@tags, 'mineCookingPot')]/@tags">,resourceScrapPolymers,resourceAcid</append>
+		
+<!-- removed perks -->
+		<remove xpath="/progression/perks/perk[@name='perkHeadshot']" />
+		
+		<!-- Rabbit Trap's Huntsman Perks -->
+		
+	<append xpath="/progression/perks/perk[@name='perkTheHuntsman']/effect_group">
+		
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,5" tags="Herbivore_Bait,Unbaited_Primitive_Rabbit_Trap,Baited_Primitive_Rabbit_Trap"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5" tags="Unbaited_Reusable_Rabbit_Trap,Baited_Reusable_Rabbit_Trap"/>
+
+	</append>
+	
+		<append xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="3,5" tags="well"/>
+		</append>
+	
+		<append xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='1,5']/@tags">,windmill</append>
+		<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='3,5']/@tags">,vehicleQuadPlaceable</append>
+		<append xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='4,5']/@tags">,vehicleMilitaryTruckChasis,vehicleMilitaryTruckPlaceable</append>
+		
+	</configs>

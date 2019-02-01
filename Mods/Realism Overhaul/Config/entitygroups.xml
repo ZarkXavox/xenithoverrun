@@ -1,0 +1,12 @@
+<configs>
+	<!-- Reduce vulture chances -->
+	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVulture']/@prob">0.03</set>
+	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVultureRadiated']/@prob">0.02</set>
+	<!-- Small chance of Bicycle Spawn -->
+	<insertBefore xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		<entitygroup name="VehicleGroup">
+			<entity name="vehicleBicycle" prob="0.1"/>
+		</entitygroup>
+	</insertBefore>
+</configs>
+

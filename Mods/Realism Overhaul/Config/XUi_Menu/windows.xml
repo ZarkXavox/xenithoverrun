@@ -1,0 +1,4 @@
+<RavenWits>
+<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Images/background.png</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture[@name='gameLogo']/@texture">@modfolder:Images/logo.png</set>
+</RavenWits>

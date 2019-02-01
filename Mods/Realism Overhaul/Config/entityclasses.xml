@@ -1,0 +1,536 @@
+<configs>
+	<append xpath="entity_classes/entity_class[@name='playerMale']">
+		<property name="ItemsOnEnterGame.GameModeSurvival" value="SurvivalPack(Locked),handFlashlight"/>
+		<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="SurvivalPack(Locked),handFlashligh"/>
+		<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="SurvivalPack(Locked),handFlashlight,keystoneBlock"/>
+		<!--<property name="DropInventoryBlock" value="cntBackpackDropped" />-->
+		<property name="CrouchYOffsetFP" value="-1"/>
+		<property name="PushFactor" value="10"/>
+		<effect_group>
+			<passive_effect name="WalkSpeed" operation="base_set" value="0.95"/>
+			<passive_effect name="RunSpeed" operation="base_set" value="1.10"/>
+			<passive_effect name="CrouchSpeed" operation="base_set" value="0.65"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='playerFemale']">
+		<property name="CrouchYOffsetFP" value="-1"/>
+	</append>
+	
+	<set xpath="/entity_classes/entity_class/property[@name='AITarget-4' and @param1='EntityPlayer,0,EntityNPC,0']/@param1">EntityPlayer,30,EntityNPC,0</set>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieTemplateMale']">
+		<property name="CanClimbLadders" value="false"/>
+		<property name="LootDropProb" value=".05"/>
+		<property name="TimeStayAfterDeath" value="100"/>
+		<property name="LegCrawlerThreshold" value="0.1"/>
+		<property name="KnockdownProneDamageThreshold" value="0.8"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieWightFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieWightRadiated']">
+		<property name="CanClimbLadders" value="false"/>
+		<property name="LootDropProb" value=".15"/>
+	</append>
+
+	<append xpath="entity_classes/entity_class[@name='zombieBoe']">
+		<property name="CanClimbLadders" value="false"/>
+		<property name="LootDropProb" value=".05"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieBoeRadiated']">
+		<property name="CanClimbLadders" value="false"/>
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFat']">
+		<property name="CanClimbLadders" value="false"/>
+		<property name="LootDropProb" value=".07"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFatFeral']">
+		<property name="LootDropProb" value=".17"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFemaleFatRadiated']">
+		<property name="LootDropProb" value=".20"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieJoeFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieJoeRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieMoeFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieMoeRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieArleneFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieArleneRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieLabFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieLabRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieScreamerFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieScreamerRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieDarleneFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieDarleneRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieMarleneFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieMarleneRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieYoFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieYoRadiated']">
+		<property name="LootDropProb" value=".5"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSteveFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSteveRadiated']">
+		<property name="LootDropProb" value=".15"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSteveCrawler']">
+		<property name="CanClimbLadders" value="true"/>
+		<property name="LootDropProb" value=".2"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSteveCrawlerFeral']">
+		<property name="CanClimbLadders" value="true"/>
+		<property name="LootDropProb" value=".17"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieBusinessManFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSnow']">
+		<property name="LootDropProb" value=".4"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSnowFeral']">
+		<property name="LootDropProb" value=".14"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSpiderFeral']">
+		<property name="CanClimbLadders" value="true"/>
+		<property name="LootDropProb" value=".17"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSpiderRadiated']">
+		<property name="CanClimbLadders" value="true"/>
+		<property name="LootDropProb" value=".25"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieNurseFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFatHawaiianFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFatCopFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFatCopRadiated']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieUtilityWorkerFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSoldierFeral']">
+		<property name="LootDropProb" value=".17"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSoldierRadiated']">
+		<property name="LootDropProb" value=".25"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSkateboarderFeral']">
+		<property name="LootDropProb" value=".8"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieSkateboarderRadiated']">
+		<property name="LootDropProb" value=".12"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieCheerleaderFeral']">
+		<property name="LootDropProb" value=".8"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieCheerleaderRadiated']">
+		<property name="LootDropProb" value=".8"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieOldTimerFeral']">
+		<property name="LootDropProb" value=".11"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieOldTimerRadiated']">
+		<property name="LootDropProb" value=".16"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieBikerFeral']">
+		<property name="LootDropProb" value=".11"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieBikerRadiated']">
+		<property name="LootDropProb" value=".16"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieFarmer']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='zombieStripperFeral']">
+		<property name="LootDropProb" value=".10"/>
+	</append>
+	
+	<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.0,10.0</set>
+	<set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">1.0,10.0</set>
+	
+	<append xpath="entity_classes/entity_class[@name='animalStag']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="70"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalDoe']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="45"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="6"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalRabbit']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalChicken']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
+		<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="100"/>
+	</append>
+
+	<append xpath="entity_classes/entity_class[@name='animalBear']">
+		<property name="ExperienceGain" value="1000"/>
+		<property name="DeadBodyHitPoints" value="1000"/>
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="250"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="50"/>
+		<drop event="Harvest" name="resourceFemur" tag="butcherHarvest" count="5"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="1"/> <!-- Animal HP scale -->
+		</effect_group>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalZombieBear']">
+		<property name="ExperienceGain" value="1000"/>
+		<property name="DeadBodyHitPoints" value="1000"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="150"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="25"/>
+		<drop event="Harvest" name="resourceFemur" tag="butcherHarvest" count="12"/>
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+			<passive_effect name="HealthMax" operation="perc_add" value="1"/> <!-- Animal HP scale -->
+		</effect_group>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalWolf']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalDireWolf']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="65"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="13"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalSnake']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalBoar']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="90"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="27"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='animalBossGrace']">
+		<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="300"/>
+		<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="100"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='vehicle4x4Truck']">
+		<property name="Explosion.RadiusBlocks" value="16"/>
+		<property name="Explosion.RadiusEntities" value="16"/>
+		<property name="Explosion.BlockDamage" value="99"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='vehicleGyrocopter']">
+		<property name="Explosion.RadiusBlocks" value="12"/>
+		<property name="Explosion.RadiusEntities" value="12"/>
+		<property name="Explosion.BlockDamage" value="69"/>
+	</append>
+	
+	<append xpath="entity_classes/entity_class[@name='Backpack']">
+		<property name="TimeStayAfterDeath" value="9999"/>
+	</append>
+	
+	<!-- rad eye -->
+	
+
+		<remove xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='ReplaceMaterial0']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieWightRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>
+	
+	<remove xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='ReplaceMaterial0']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieBoeRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieFemaleFatRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieJoeRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieMoeRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieArleneRadiated']/property[@name='ReplaceMaterial2']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='ReplaceMaterial0']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieLabRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieScreamerRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieDarleneRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieDarleneRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieMarleneRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieYoRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='ReplaceMaterial0']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieSpiderRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='ReplaceMaterial0']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='ReplaceMaterial1']"/>
+	<set xpath="/entity_classes/entity_class[@name='zombieSoldierRadiated']/property[@name='ReplaceMaterial0']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieSkateboarderRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieCheerleaderRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieOldTimerRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieOldTimerRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+	<remove xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='ReplaceMaterial0']"/>
+	<!--<set xpath="/entity_classes/entity_class[@name='zombieBikerRadiated']/property[@name='ReplaceMaterial1']/@value">#@modfolder:Resources/RadEye.unity3d?GreenEye</set>	-->
+
+    <append xpath="/entity_classes">
+	
+    <entity_class name="zombieFemaleFatRadiated" extends="zombieFemaleFatFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>	
+    <entity_class name="zombieJoeRadiated" extends="zombieJoeFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieMoeRadiated" extends="zombieMoeFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieArleneRadiated" extends="zombieArleneFeral">  
+        <property name="ReplaceMaterial2" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieScreamerRadiated" extends="zombieScreamerFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieDarleneRadiated" extends="zombieDarleneFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieMarleneRadiated" extends="zombieMarleneFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieYoRadiated" extends="zombieYoFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieSteveRadiated" extends="zombieSteveFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieSkateboarderRadiated" extends="zombieSkateboarderFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieCheerleaderRadiated" extends="zombieCheerleaderFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieOldTimerRadiated" extends="zombieOldTimerFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>
+    <entity_class name="zombieBikerRadiated" extends="zombieBikerFeral">  
+        <property name="ReplaceMaterial1" value="#@modfolder:Resources/RadEye.unity3d?GreenEye"/>
+    </entity_class>	
+	
+    </append>
+	
+	<!-- TRAPPED RABBIT -->
+	
+	<append xpath="/entity_classes">
+		
+		<entity_class name="Trapped_Rabbit">
+			<property name="Tags" value="animal"/>
+			<property name="Mesh" value=""/>
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+			<property name="Class" value="EntityAnimalRabbit"/>
+			<property name="Parent" value="Animals"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
+			<property name="Faction" value="animals"/>
+			<property name="AvatarController" value="GameObjectAnimalAnimation"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="Mass" value="12"/>
+			<property name="Weight" value="10"/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SoundHurt" value="Animals/rabbitpain"/>
+			<property name="SoundDeath" value="Animals/rabbitdeath"/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="true"/>
+			
+			<property name="AITask-1" value="Look"/>
+
+			<!-- Stealth settings -->
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="30"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/>
+
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+
+			<!-- Gameplay -->
+			<property name="MaxTurnSpeed" value="450"/>
+			<property name="MoveSpeed" value="0"/>
+			<property name="MoveSpeedPanic" value="0"/>
+			<property name="CanClimbLadders" value="false"/>
+
+			<property name="ExperienceGain" value="173"/>
+			<!-- <property name="CorpseBlock" value="goreBlockAnimal"/><property name="CorpseBlockChance" value="0"/> -->
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="175"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+
+
+			<effect_group name="Base Effects">
+				<passive_effect name="JumpStrength" operation="base_set" value="0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="10"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			</effect_group>
+		</entity_class>
+
+	</append>
+	
+	<append xpath="/entity_classes">	
+		<entity_class name="vehicleMilitaryTruck">
+			<property name="Tags" value="vehicle"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/GuppyMobiles.unity3d?guppyMilitaryTruck"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="82"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="9"/>
+			<property name="Explosion.RadiusEntities" value="6"/>
+			<property name="Explosion.BlockDamage" value="500"/>
+			<property name="Explosion.EntityDamage" value="90"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_4x4"/>
+		</entity_class>
+		
+		<entity_class name="vehicleQuad">
+			<property name="Tags" value="vehicle"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#@modfolder:Resources/manux_Quad.unity3d?QuadPrefab_A17.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="77"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_minibike"/>
+		</entity_class>
+	</append>
+	</configs>
+

@@ -1,0 +1,20 @@
+<configs>
+		<set xpath="/traders/@quality_mod">1,6</set>
+		<set xpath="/traders/@buy_markup">1.1</set>
+		<set xpath="/traders/@sell_markdown">0.4</set>
+	
+		<append xpath="traders/trader_item_groups/trader_item_group[@name='ammo']">
+			<item name="ammoArrowPolymer" count="10,60"/>
+		</append>
+
+</configs>
+
+
+<!-- <append xpath="/traders">
+		<trader_item_groups>
+			<trader_item_group name="tshirtAll">
+				<item name="tshirt"/>
+			</trader_item_group>
+		</trader_item_groups>
+	</append>
+>

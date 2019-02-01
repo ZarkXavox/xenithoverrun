@@ -1,0 +1,5 @@
+<configs>
+	<append xpath="spawning/biome[@name='city']">
+		<spawn maxcount="1" respawndelay="3" time="Any" entitygroup="VehicleGroup" />
+	</append>
+</configs>
